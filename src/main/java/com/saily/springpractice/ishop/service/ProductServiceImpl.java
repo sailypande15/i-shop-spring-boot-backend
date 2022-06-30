@@ -24,4 +24,10 @@ public class ProductServiceImpl implements ProductService {
 		return this.productRepository.findAll();		
 	}
 
+	@Override
+	public Product getProductById(Long productId) {
+		// TODO Auto-generated method stub
+		return this.productRepository.findById(productId).get();
+	}
+
 }

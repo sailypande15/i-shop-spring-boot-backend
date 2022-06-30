@@ -9,5 +9,6 @@ public interface ProductService {
 	
 	public Product createProduct(Product product);
 	public List<Product> getAllProducts();
+	public Product getProductById(Long productId);
 
 }
