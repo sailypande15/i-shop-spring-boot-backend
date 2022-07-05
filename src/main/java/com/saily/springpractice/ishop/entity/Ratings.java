@@ -14,9 +14,21 @@ public class Ratings {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long ratingId;	
-	private float rate;
+	private Double rate;
 	private int count;
 	
+	
+	
+	public Ratings() {
+		super();
+		
+	}
+	public Ratings(Double rate, int count) {
+		super();
+		this.rate = rate;
+		this.count = count;
+	}
+
 	@OneToOne(mappedBy = "rating")	
 	private Product product;
 	
@@ -33,10 +45,10 @@ public class Ratings {
 	public void setRatingId(Long ratingId) {
 		this.ratingId = ratingId;
 	}
-	public float getRate() {
+	public Double getRate() {
 		return rate;
 	}
-	public void setRate(float rate) {
+	public void setRate(Double rate) {
 		this.rate = rate;
 	}
 	public int getCount() {
